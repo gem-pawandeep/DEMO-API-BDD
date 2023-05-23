@@ -1,5 +1,7 @@
 package com.qa.gemini.stepDefinition;
 
+import com.gemini.generic.reporting.GemTestReporter;
+import com.gemini.generic.reporting.STATUS;
 import com.qa.gemini.commonUtils.Common_Utils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,6 +10,11 @@ import com.gemini.generic.utils.GemJarLambda;
 
 public class Step_Definition {
     int status;
+
+    @Given("Hello")
+    public void hh(){
+        GemTestReporter.addTestStep("IN Backgorund", "In Background", STATUS.PASS);
+    }
 
     @Given("^Set endpoint and method \"(.*)\" and \"(.*)\"$")
     public void hitApiWithStep(String url, String method) throws Exception {
