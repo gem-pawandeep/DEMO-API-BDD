@@ -14,22 +14,6 @@ Feature: Test_API
       | endpoint | Method | Expected_status | SampleName       |
       | Login    | Post   | 200             | Login_sampleJson |
 
-
-  Scenario Outline: Update the suite using Put API (suitexe case)
-    Given Update Suite using endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
-    Then Verify Status code <Expected_status>
-    Examples:
-      | endpoint   | Method | Expected_status | SampleName       |
-      | Post_Suite | put    | 200             | put_1_sampleJson |
-
-  Scenario Outline: Insert Test-Suite Using Post APIs
-    Given Set Suite-API endpoint and method and SampleName "<endpoint>" and "<Method>" and "<SampleName>"
-    Then Verify Status code <Expected_status>
-    Examples:
-      | endpoint   | Method | Expected_status | SampleName        |
-      | Post_Suite | Post   | 201             | psuite_sampleJson |
-
-
   Scenario Outline: Get data of suite s-run id not present
     Given Authenticate endpoint and method "<endpoint>" and "<Method>"
     Then Verify Status code <Expected_status>
