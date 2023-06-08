@@ -1,8 +1,5 @@
 Feature: Test_API
 
-  Background:
-    Given Hello
-
   Scenario Outline: Get Company API
     Given Set endpoint and method "<endpoint>" and "<Method>"
     Then Verify Status code <Expected_status>

@@ -11,11 +11,6 @@ import com.gemini.generic.utils.GemJarLambda;
 public class Step_Definition {
     int status;
 
-    @Given("Hello")
-    public void hh(){
-        GemTestReporter.addTestStep("IN Backgorund", "In Background", STATUS.PASS);
-    }
-
     @Given("^Set endpoint and method \"(.*)\" and \"(.*)\"$")
     public void hitApiWithStep(String url, String method) throws Exception {
         status = Common_Utils.HitAPI(url, method, "Test for " + method.toUpperCase()).getStatus();
